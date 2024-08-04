@@ -1,7 +1,8 @@
 # Neovim configuration notes.
 
 ## Tasks
-- [ ] Make some different configurations when on Windows.
+- [X] Make some different configurations when on Windows.
+      fzf_native plugin yow works.
 - [X] Configure general tabs to 4 spaces.
 - [ ] Split configuration in an undestandable manner.
 

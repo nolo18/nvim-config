@@ -230,12 +230,19 @@ require('lazy').setup({
 
         -- `build` is used to run some command when the plugin is installed/updated.
         -- This is only run then, not every time Neovim starts up.
-        build = 'make',
+        -- build = 'make',
+        build = vim.uv.os_uname().sysname == 'Windows_NT' and 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' or 'make',
 
         -- `cond` is a condition used to determine whether this plugin should be
         -- installed and loaded.
         cond = function()
-          return vim.fn.executable 'make' == 1
+          if vim.uv.os_uname().sysname == 'Windows_NT' then
+            return vim.fn.executable 'cmake' == 1
+          elseif vim.uv.os_uname().sysname == 'Linux' then
+            return vim.fn.executable 'make' == 1
+          else
+            return false
+          end
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
