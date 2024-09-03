@@ -1,22 +1,24 @@
 # Neovim configuration notes.
 
 ## Tasks
-- [X] Make some different configurations when on Windows.
-      fzf_native plugin yow works.
-- [X] Configure general tabs to 4 spaces.
-- [ ] Split configuration in an undestandable manner.
+- [ ] Split configuration in an understandable manner.
+- [ ] Some Linux config related, as Treesitter sintax for bash are no needed
+      in Windows installations.
 
 
 ## Issues
-- [X] Fuzzy search in opened buffers doesn't work at 3-8-24
 
+## Testing
+- [ ] Let's test obsidian plugin
 
 ## Quarantine
 - [ ] Do I want Highlights all occurs of word under cursor like VSCode?
 init.lua:430
-- [X] Do I want cursorline? It is too intrusive with this colorshceme.
-I'll leave it disabled for now. You can also configured this color only.
 - [ ] Inlay Hints are now configured as a toggle thing. I Don't like it too
 much, surely I'll have to take care of disable it completely.
 - [ ] I think *autoformat* stuff is confiured to work automatically. I think
 I dont't like this, but for now It will be under quarantine. init.lua:550
+- [ ] Do I want <Ctrl+y> used to insert current selected autocompletion
+suggestion?
+- [ ] I'm not sure if I really want all the conceallevel zig apply for all
+files, it could cause some issues.
