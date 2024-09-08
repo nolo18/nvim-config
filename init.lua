@@ -855,7 +855,8 @@ require('lazy').setup({
 })
 
 -- QUARANTINE ZONE
-vim.o.conceallevel = 2
+-- TODO: Could be interesting make a toggle function for this option
+vim.o.conceallevel = 1
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
